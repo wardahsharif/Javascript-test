@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <!--html-->
+
+    <p id="sample">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, aliquam!
+    </p>
+    <button type="button" onclick="anotherOne()">
+      click me to change the paragraph
+    </button>
+
+    <p id="container">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eius,
+      reiciendis laborum rerum consectetur sed tenetur corrupti facilis
+      inventore consequatur?
+    </p>
+    <button type="button" onclick="ourContainer()">click me</button>
+
+    <p id="test"></p>
+    <button type="button" ondblclick="balanceFunction()">
+      Refresh new balance
+    </button>
+
+    <!--javascript-->
+
+    <script>
+      //functions
+
+      function anotherOne() {
+        document.getElementById("sample").innerHTML =
+          "another change from a function";
+      }
+
+      function ourContainer() {
+        document.getElementById("container").innerHTML =
+          "another change from a function";
+      }
+
+      function balanceFunction() {
+        document.getElementById(
+          "test"
+        ).innerHTML = `Hello  ${customerName}. Your balance was ksh  ${balance} you have deposited ksh ${deposit}, your new balance is ${currentBalance} `;
+      }
+
+      //balanceFunction()
+
+      //variables - they are containers for storing data
+      // different variables used are:
+      //automatically eg: balance = 800;
+      // var plus keyword eg: var balance = 800;
+      // const plus keyword eg: const balance = 800,
+      // let plus keyword eg: let balance = 800;
+
+      balance = 8050;
+      deposit = 5000;
+
+      currentBalance = balance - deposit;
+
+      customerName = "james";
+
+    </script>
+  </body>
+</html>
